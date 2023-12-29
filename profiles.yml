@@ -1,0 +1,26 @@
+dbt_snwoflake_core:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: wahgabf-xj91257
+      user: Perle
+      password: Ironstone94!
+      role: ACCOUNTADMIN
+      database: AIRBYTE_DATABASE
+      warehouse: AIRBYTE_WAREHOUSE
+      schema: PUBLIC
+      threads: 1
+      retries: 2
+
+    prod:
+      type: snowflake
+      account: wahgabf-xj91257
+      user: Perle
+      password: Ironstone94!
+      role: ACCOUNTADMIN
+      database: AIRBYTE_DATABASE
+      warehouse: AIRBYTE_WAREHOUSE
+      schema: AIRBYTE_SCHEMA
+      threads: 1
+      retries: 2

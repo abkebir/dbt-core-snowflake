@@ -1,0 +1,14 @@
+
+version: 2
+
+models:
+  - name: flex
+    description: "dbt-core-snwo unit test"
+    columns:
+      - name: id
+        description: "Verify the uniqueness of one column"
+        tests:
+          - not_null
+          - relationships:
+              to: "{{ref('flex')}}"
+              field: id
