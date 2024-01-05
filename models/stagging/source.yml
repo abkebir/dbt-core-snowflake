@@ -1,0 +1,10 @@
+version: 2 
+sources:
+  - name: AIRBYTE_DATABASE
+    schema: PUBLIC
+    tables: 
+      - name: customers
+      - name: orders
+      - name: employees
+      - name: products
+      - name: order_details
