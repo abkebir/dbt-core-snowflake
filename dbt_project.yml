@@ -33,5 +33,17 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   dbt_snwoflake_core:
     # Config indicated by + and applies to all files under models/example/
-    example:
-      +materialized: view
+    stagging:
+      +enabled: true
+      +materialized: table
+      +schema: stagging
+    analytics_obt:
+      +enabled: true
+      +materialized: table
+      +schema: analytic
+    datamart:
+      +enabled: true
+      +materialized: table
+      +schema: datamart
+    
+    
